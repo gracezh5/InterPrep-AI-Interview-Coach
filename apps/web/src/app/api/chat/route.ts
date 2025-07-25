@@ -1,13 +1,9 @@
-// Location: apps/web/src/app/api/chat/route.ts
-// This code has ZERO dependency on the 'ai' package.
-
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextRequest, NextResponse } from 'next/server';
 
 // Get the API key from environment variables
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
 
-// IMPORTANT! Set the runtime to edge
 export const runtime = 'edge';
 
 export async function POST(req: NextRequest) {
@@ -34,7 +30,6 @@ export async function POST(req: NextRequest) {
       })),
     });
 
-    // Create a new stream that we can control
     const readableStream = new ReadableStream({
       async start(controller) {
         // Iterate over the stream from Gemini

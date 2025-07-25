@@ -1,6 +1,7 @@
 import { useClerk } from "@clerk/clerk-react";
 import { LogOut, LayoutDashboard } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 import { Button } from "./button";
 import {
@@ -30,8 +31,7 @@ export function UserNav({
           <Avatar className="h-10 w-10">
             <AvatarImage src={image} alt={name} />
             <AvatarFallback>
-              {/* Fallback to a generic profile image if user image fails */}
-              <img src={"/images/profile.png"} alt={name} />
+              <Image src={"/images/profile.png"} alt={name} width={40} height={40} />
             </AvatarFallback>
           </Avatar>
         </Button>
@@ -49,14 +49,13 @@ export function UserNav({
         
         <Link href="/">
           <DropdownMenuItem className="hover:cursor-pointer hover:bg-gray-200">
-            {/* Using a more appropriate icon and text */}
             <LayoutDashboard className="mr-2 h-4 w-4 text-black" />
             <span className="text-black">Home</span>
           </DropdownMenuItem>
         </Link>
-
+        
         <DropdownMenuItem
-          onClick={() => signOut({ redirectUrl: '/' })} // It's good practice to redirect on sign out
+          onClick={() => signOut({ redirectUrl: '/' })}
           className="hover:cursor-pointer hover:bg-gray-200"
         >
           <LogOut className="mr-2 h-4 w-4 text-black" />

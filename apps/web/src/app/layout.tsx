@@ -1,4 +1,3 @@
-// Location: apps/web/src/app/layout.tsx
 import "./globals.css";
 import ConvexClientProvider from "./ConvexClientProvider";
 import { Inter } from "next/font/google";

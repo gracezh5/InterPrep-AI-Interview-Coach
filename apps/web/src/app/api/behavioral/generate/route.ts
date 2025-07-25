@@ -1,4 +1,3 @@
-// Location: apps/web/src/app/api/behavioral/generate/route.ts
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextRequest, NextResponse } from 'next/server';
 

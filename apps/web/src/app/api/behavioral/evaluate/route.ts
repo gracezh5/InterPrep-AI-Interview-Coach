@@ -1,5 +1,4 @@
 
-// Location: apps/web/src/app/api/behavioral/evaluate/route.ts
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextRequest } from 'next/server';
 
@@ -13,7 +12,6 @@ export async function POST(req: NextRequest) {
 
     const model = genAI.getGenerativeModel({
       model: 'gemini-1.5-flash',
-      // This is the CRITICAL prompt engineering for the stern persona
       systemInstruction: `
         You are a stern, demanding, but ultimately fair hiring manager at a top-tier tech firm like Google or Amazon. You have no time for pleasantries or excuses. Your only goal is to determine if a candidate is truly exceptional.
 
@@ -35,7 +33,6 @@ export async function POST(req: NextRequest) {
       `,
     });
 
-    // We format the user's answers into a single prompt for the AI
     const userPrompt = qaPairs.map((pair: {question: string, answer: string}) => 
       `Question: ${pair.question}\nAnswer: ${pair.answer}`
     ).join('\n\n---\n\n');

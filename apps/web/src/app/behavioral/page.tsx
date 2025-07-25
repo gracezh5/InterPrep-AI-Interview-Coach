@@ -1,4 +1,3 @@
-// Location: apps/web/src/app/behavioral/page.tsx
 "use client";
 
 import { useState } from 'react';
@@ -17,7 +16,7 @@ export default function BehavioralPage() {
   const [isLoadingQuestions, setIsLoadingQuestions] = useState(false);
   const [isEvaluating, setIsEvaluating] = useState(false);
 
-  // Fetches a new set of questions from your API
+  // Fetches a new set of questions from API
   const handleGenerateQuestions = async () => {
     setIsLoadingQuestions(true);
     setQaPairs([]); // Clear old questions
@@ -30,7 +29,6 @@ export default function BehavioralPage() {
       }
     } catch (error) {
       console.error("Failed to fetch questions", error);
-      // Optionally, add user-facing error handling here
     }
     setIsLoadingQuestions(false);
   };
@@ -66,7 +64,6 @@ export default function BehavioralPage() {
       }
     } catch (error) {
       console.error("Failed to get evaluation", error);
-       // Optionally, add user-facing error handling here
     }
     setIsEvaluating(false);
   };

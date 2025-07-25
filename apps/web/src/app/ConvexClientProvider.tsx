@@ -5,12 +5,7 @@ import { ConvexReactClient } from "convex/react";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { ClerkProvider, useAuth } from "@clerk/nextjs";
 import { ErrorBoundary } from "./ErrorBoundary";
-// import { env } from "@/env";
 
-// const convex = new ConvexReactClient(env.NEXT_PUBLIC_CONVEX_URL);
-
-// We are reading the variables directly from the environment, bypassing the broken import.
-// The "!" tells TypeScript that we are certain these variables will exist.
 const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY!;
 

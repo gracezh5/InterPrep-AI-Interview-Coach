@@ -1,4 +1,3 @@
-// Location: apps/web/src/app/technical/page.tsx
 "use client";
 
 import { useState } from 'react';
@@ -119,11 +118,9 @@ export default function TechnicalPage() {
               </button>
             </div>
           </div>
-
-                    {review && (
+          {review && (
             <div className="mt-10 bg-blue-50 p-6 rounded-lg shadow-inner border-2 border-blue-100">
               <h2 className="text-2xl font-bold mb-4">Code Review Result</h2>
-              {/* --- THIS IS THE CHANGE --- */}
               <div className="prose max-w-none">
                 <MarkdownRenderer>{review}</MarkdownRenderer>
               </div>

@@ -1,4 +1,3 @@
-// Location: apps/web/src/components/layout/ToolNavigation.tsx
 "use client";
 
 import Link from 'next/link';

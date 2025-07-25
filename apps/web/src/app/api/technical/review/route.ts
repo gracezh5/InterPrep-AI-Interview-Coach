@@ -1,4 +1,3 @@
-// Location: apps/web/src/app/api/technical/review/route.ts
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 export const runtime = 'edge';

@@ -1,4 +1,3 @@
-// Location: apps/web/src/components/common/MarkdownRenderer.tsx
 "use client";
 
 import ReactMarkdown from 'react-markdown';
@@ -8,8 +7,6 @@ export default function MarkdownRenderer({ children }: { children: string }) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
-      // This 'components' prop is where the magic happens.
-      // We are telling the renderer how to style each HTML tag.
       components={{
         h2: ({ node, ...props }) => (
           <h2 className="text-2xl font-bold mt-6 mb-3 border-b pb-2" {...props} />

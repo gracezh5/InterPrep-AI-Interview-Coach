@@ -1,4 +1,3 @@
-// Location: apps/web/src/app/api/resume/review/route.ts
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 export const runtime = 'edge';
@@ -14,7 +13,6 @@ export async function POST(req: Request) {
     const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
     const model = genAI.getGenerativeModel({
       model: 'gemini-1.5-flash',
-      // This is the critical prompt for the stern recruiter persona
       systemInstruction: `
         You are a senior technical recruiter at a FAANG company. You are reviewing a candidate's resume for a Software Engineer role. You are busy and need to be direct, professional, and stern. Your feedback should be brutally honest but actionable.
 

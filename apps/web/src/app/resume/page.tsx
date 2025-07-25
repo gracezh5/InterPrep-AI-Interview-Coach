@@ -1,4 +1,3 @@
-// Location: apps/web/src/app/resume/page.tsx
 "use client";
 
 import { useState } from 'react';

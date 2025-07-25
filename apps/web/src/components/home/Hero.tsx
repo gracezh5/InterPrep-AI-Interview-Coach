@@ -1,8 +1,7 @@
-import Link from 'next/link'; // Import the Link component for navigation
+import Link from 'next/link';
 
 const Hero = () => {
   return (
-    // This main container centers everything vertically and horizontally
     <div className="flex flex-col items-center justify-center min-h-screen text-center px-4 -mt-20">
       
       {/* Main Headline */}
