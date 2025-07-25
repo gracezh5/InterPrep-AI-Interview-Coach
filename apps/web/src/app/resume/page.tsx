@@ -68,7 +68,7 @@ export default function ResumePage() {
         {/* Display the evaluation result */}
         {review && (
           <div className="mt-10 bg-green-50 p-6 rounded-lg shadow-inner border-2 border-green-100">
-            <h2 className="text-2xl font-bold mb-4">Recruiter's Feedback</h2>
+            <h2 className="text-2xl font-bold mb-4">Recruiter&apos;s Feedback</h2>
             <MarkdownRenderer>{review}</MarkdownRenderer>
           </div>
         )}
