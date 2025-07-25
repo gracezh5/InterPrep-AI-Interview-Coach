@@ -2,7 +2,7 @@
 
 An AI-powered web application to help software engineers ace their technical and behavioral interviews.
 
-**Live Demo Link:** [https://interprep.vercel.app](https://interprep.vercel.app) *(Replace this with your live Vercel link after you deploy!)*
+**Live Demo Link:** [https://interprep-cc83nor48-graces-projects-08080fc9.vercel.app/](https://interprep-cc83nor48-graces-projects-08080fc9.vercel.app/)
 
 ---
 
