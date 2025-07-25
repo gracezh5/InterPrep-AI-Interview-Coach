@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+
+  --color-primary: #0d87e1;
+
+  --font-inter: Inter, sans-serif;
+  --font-lato: Lato, sans-serif;
+  --font-montserrat: Montserrat, sans-serif;
+
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+}
+
+@utility container {
+  margin-inline: auto;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+/* This is our new background style for the studious, graph-paper look */
+body {
+  background-color: #f8f9fa; /* A light, off-white background color */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px; /* Adjust the size of the grid squares here */
+  color: #343a40; /* A dark gray for text for good readability */
+}
+
+
+.button {
+  border-radius: 8px;
+  background: linear-gradient(
+    267deg,
+    #0983df -9.43%,
+    #040218 -9.42%,
+    #0d87e1 4.63%,
+    #0983df 127.55%
+  );
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}

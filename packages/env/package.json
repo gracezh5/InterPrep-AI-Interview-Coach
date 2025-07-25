@@ -1,0 +1,16 @@
+{
+  "name": "@narby/env",
+  "version": "1.0.0",
+  "description": "Typesafe environment variable validation for Narby",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.25.75"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
